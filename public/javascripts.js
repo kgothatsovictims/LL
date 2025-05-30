@@ -255,7 +255,7 @@ if (elements.orderNow) {
 
         console.log('Sending order to backend:', data);
 
-        fetch('https://ll-dnlb.onrender.com', {
+        fetch('https://ll-dnlb.onrender.com/send-order', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

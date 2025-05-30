@@ -255,7 +255,7 @@ if (elements.orderNow) {
 
         console.log('Sending order to backend:', data);
 
-        fetch('https://your-render-app.onrender.com/send-order', {
+        fetch('https://ll-dnlb.onrender.com', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -282,6 +282,8 @@ if (elements.orderNow) {
             });
     });
 }
-
+app.use(cors({
+    origin: 'https://ll-dnlb.onrender.com'
+}));
 // Initialize cart
 updateCart();
